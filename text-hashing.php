@@ -1,43 +1,20 @@
 <?php
-    if (isset($_POST['submit'])) {
-        $txt = $_POST['txt'];
-        $file = $_POST['csv_file'];
-        $type = $_POST['enc'];
+  if (isset($_POST['submit'])) {
+    $txt = $_POST['txt'];
+    $file = $_POST['csv_file'];
+    $type = $_POST['enc'];
         
-        if ($type == "sha1") {
-            $crypted = sha1($txt);
-        } else {
-            $crypted = md5($txt);
-        }
-
-        // Seccion para crear archivo en txt
-        
-        //$arch = fopen('practica1.txt', 'a+') or die ("error creating file");
-        //fwrite($arch, $crypted);
-        $arch = "log.txt";
-        file_put_contents($arch, $crypted);
-        echo('<script>alert("Your hash has been sabed")</script>');
-        //fclose($arch);
+    if ($type == "sha1") {
+      $crypted = sha1($txt);       
+    } else {
+      $crypted = md5($txt);
     }
-    /*
-    $variable=$crypted;
-    echo($variable);
 
-    if (isset($_POST['submit2'])) {
-      // Recupera el hash
-      $txtres = $_POST['txtres'];
-      echo($txtres);
-      //echo($crypted=$_GET['txtread']);
-      //$crypted = $crypted;
-      // Revisa que el hash sea correcto, en caso de ser otro codigo madara error y se imprimira en el iput text
-      if ($txtres == $variable) {
-          $txtdehash = "True";
-      } else {
-          $txtdehash = "False";
-      }
-
-    }
-    */
+    // Seccion para crear archivo en txt
+    $arch = "log.txt";
+    file_put_contents($arch, $crypted);
+    echo('<script>alert("Your hash has been sabed")</script>');
+  }
 ?>
 
 <!DOCTYPE html>

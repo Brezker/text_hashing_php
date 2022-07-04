@@ -23,11 +23,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Hash Generator</title>
+    <title>Text Hash</title>
 </head>
 <body>
     <div class="wrapper">
-        <h2>Hash Generator</h2>
+        <h2>Text Hash</h2>
         <br>
         <form class="form" action="" method="post">
             <input type="text" name="txthash" required>
